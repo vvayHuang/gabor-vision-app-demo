@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-swiss-bg text-swiss-text font-sans antialiased;
+}
