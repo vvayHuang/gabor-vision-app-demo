@@ -1,9 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   devServer: {
-    host: '0.0.0.0'
+    host: '',
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      title: 'Gabor Vision',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Enhance your visual cortex via Gabor patch contrast sensitivity training. A minimalist, Swiss-style visual training application.' },
+        { name: 'format-detection', content: 'telephone=no' },
+      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    },
   },
   modules: ['@nuxtjs/tailwindcss', '@vueuse/motion/nuxt', '@vite-pwa/nuxt'],
   pwa: {
